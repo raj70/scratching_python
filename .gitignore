@@ -1,0 +1,14 @@
+.vscode/.ropeproject/objectdb
+__pycache__/app_constant.cpython-38.pyc
+__pycache__/app_todo.cpython-38.pyc
+__pycache__/todo_abstract.cpython-38.pyc
+__pycache__/todo_add.cpython-38.pyc
+__pycache__/todo_app_update.cpython-38.pyc
+__pycache__/todo_list.cpython-38.pyc
+__pycache__/todo_service.cpython-38.pyc
+__pycache__/todo_to_file.cpython-38.pyc
+__pycache__/todo_update.cpython-38.pyc
+__pycache__/todo.cpython-38.pyc
+__pycache__/todos.cpython-38.pyc
+todo.txt
+todo_back.txt
