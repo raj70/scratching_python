@@ -12,3 +12,4 @@ __pycache__/todo.cpython-38.pyc
 __pycache__/todos.cpython-38.pyc
 todo.txt
 todo_back.txt
+*.pyc

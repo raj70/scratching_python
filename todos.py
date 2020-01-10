@@ -65,7 +65,7 @@ class Todos():
                 todo = self.todos[index]
                 todo_list.last_id = int(todo.id)
                 todo_list.todos.append(todo)
-                todo_list.selected_id.append(todo.id)
+                todo_list.selected_id.append(int(todo.id))
                 index = index + 1
             except:
                 print("Warning: does not exist")

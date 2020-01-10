@@ -66,6 +66,29 @@ class Todo_Service:
 
         tofile.write_todos(newTodos)
 
+    def delete_todo(self, id: int):
+        tofile = Todo_To_File(constant.file_name)
+        ts = tofile.read()
+
+        newTodos = []
+
+        for t in ts.todos:
+            if int(id) != int(t.id):
+                newTodos.append(t)
+            elif int(id) == int(t.id):
+                print("Delete: Found")
+            else:
+                print("Delete: Not Found")
+
+        if len(newTodos) > 0:
+
+            tofile.write_todos(newTodos)
+        else:
+            print("Deleted: empty")
+
     def add_todo(self, todo: Todo):
         tofile = Todo_To_File(constant.file_name)
         tofile.write_line(todo)
+
+    def reset(self, id):
+        self.last_id = id

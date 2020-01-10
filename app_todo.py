@@ -4,12 +4,13 @@ from todo_service import Todo_Service
 from todo_add import Todo_Add
 from todo_app_update import Todo_App_Update
 from todo_list import Todo_List
+from todo_delete import Todo_Delete
 
 
 class App_Todo:
 
     def __init__(self):
-        self.todo_service = Todo_Service()
+        # self.todo_service = Todo_Service() # we need to reset on each task
 
     def app_menu(self):
         print('---------------App: TodoList-----------------------------')
@@ -27,7 +28,7 @@ class App_Todo:
             if input_text.upper() == 'A':
                 self.app_new_todo()
             elif input_text.upper() == 'D':
-                print("Not implemented")
+                self.app_delete_todo()
             elif input_text.upper() == 'U':
                 self.app_update_todo()
             elif input_text.upper() == 'L':
@@ -36,13 +37,17 @@ class App_Todo:
             self.app_menu()
 
     def app_new_todo(self):
-        appNew = Todo_Add(self.todo_service)
+        appNew = Todo_Add(Todo_Service())
         appNew.process()
 
     def app_update_todo(self):
-        appUpdate = Todo_App_Update(self.todo_service)
+        appUpdate = Todo_App_Update(Todo_Service())
         appUpdate.process()
 
     def app_list_todo(self):
-        list = Todo_List(self.todo_service)
+        list = Todo_List(Todo_Service())
         list.process()
+
+    def app_delete_todo(self):
+        appDelete = Todo_Delete(Todo_Service())
+        appDelete.process()
